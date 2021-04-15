@@ -1,0 +1,184 @@
+<Project Sdk="Microsoft.NET.Sdk" InitialTargets="Update Protos">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.15.6" />
+    <PackageReference Include="Grpc" Version="2.36.4" />
+    <PackageReference Include="Grpc.Core" Version="2.36.4" />
+    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.32.0" />
+    <PackageReference Include="Grpc.Net.Common" Version="2.36.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.36.4" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="envoy/annotations/deprecation.proto" GrpcServices="None" Access="Internal">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/annotations/deprecation.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/accesslog/v3/accesslog.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/accesslog/v3/accesslog.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/bootstrap/v3/bootstrap.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/bootstrap/v3/bootstrap.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/cluster/v3/circuit_breaker.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/cluster/v3/circuit_breaker.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/cluster/v3/cluster.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/cluster/v3/cluster.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/cluster/v3/filter.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/cluster/v3/filter.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/cluster/v3/outlier_detection.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/cluster/v3/outlier_detection.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/core/v3/address.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/core/v3/address.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/core/v3/backoff.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/core/v3/backoff.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/core/v3/base.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/core/v3/base.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/core/v3/health_check.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/core/v3/health_check.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/core/v3/http_uri.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/core/v3/http_uri.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/core/v3/config_source.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/core/v3/config_source.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/core/v3/event_service_config.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/core/v3/event_service_config.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/core/v3/extension.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/core/v3/extension.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/core/v3/grpc_service.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/core/v3/grpc_service.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/core/v3/protocol.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/core/v3/protocol.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/core/v3/proxy_protocol.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/core/v3/proxy_protocol.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/core/v3/socket_option.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/core/v3/socket_option.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/core/v3/udp_socket_config.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/core/v3/udp_socket_config.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/endpoint/v3/endpoint.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/endpoint/v3/endpoint.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/endpoint/v3/endpoint_components.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/endpoint/v3/endpoint_components.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/listener/v3/api_listener.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/listener/v3/api_listener.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/listener/v3/listener.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/listener/v3/listener.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/listener/v3/listener_components.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/listener/v3/listener_components.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/listener/v3/quic_config.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/listener/v3/quic_config.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/listener/v3/udp_listener_config.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/listener/v3/udp_listener_config.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/metrics/v3/stats.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/metrics/v3/stats.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/overload/v3/overload.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/overload/v3/overload.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/route/v3/route_components.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/route/v3/route_components.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/config/trace/v3/http_tracer.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/config/trace/v3/http_tracer.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/extensions/transport_sockets/tls/v3/common.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/extensions/transport_sockets/tls/v3/common.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/extensions/transport_sockets/tls/v3/secret.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/extensions/transport_sockets/tls/v3/secret.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/extensions/upstreams/http/v3/http_protocol_options.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/extensions/upstreams/http/v3/http_protocol_options.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/type/matcher/v3/number.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/type/matcher/v3/number.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/type/matcher/v3/value.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/type/matcher/v3/value.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/type/v3/http.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/type/v3/http.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/type/v3/percent.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/type/v3/percent.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/type/v3/range.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/type/v3/range.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/type/v3/semantic_version.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/type/v3/semantic_version.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/type/metadata/v3/metadata.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/type/metadata/v3/metadata.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/type/matcher/v3/regex.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/type/matcher/v3/regex.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/type/matcher/v3/string.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/type/matcher/v3/string.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/type/matcher/v3/metadata.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/type/matcher/v3/metadata.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="envoy/type/tracing/v3/custom_tag.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/envoy/main/api/envoy/type/tracing/v3/custom_tag.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="udpa/annotations/migrate.proto" GrpcServices="None" Access="Internal">
+      <SourceUrl>https://raw.githubusercontent.com/cncf/udpa/main/udpa/annotations/migrate.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="udpa/annotations/security.proto" GrpcServices="None" Access="Internal">
+      <SourceUrl>https://raw.githubusercontent.com/cncf/udpa/main/udpa/annotations/security.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="udpa/annotations/sensitive.proto" GrpcServices="None" Access="Internal">
+      <SourceUrl>https://raw.githubusercontent.com/cncf/udpa/main/udpa/annotations/sensitive.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="udpa/annotations/status.proto" GrpcServices="None" Access="Internal">
+      <SourceUrl>https://raw.githubusercontent.com/cncf/udpa/main/udpa/annotations/status.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="udpa/annotations/versioning.proto" GrpcServices="None" Access="Internal">
+      <SourceUrl>https://raw.githubusercontent.com/cncf/udpa/main/udpa/annotations/versioning.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="validate/validate.proto" GrpcServices="None" Access="Internal">
+      <SourceUrl>https://raw.githubusercontent.com/envoyproxy/protoc-gen-validate/main/validate/validate.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="xds/core/v3/authority.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/cncf/udpa/main/xds/core/v3/authority.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="xds/core/v3/context_params.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/cncf/udpa/main/xds/core/v3/context_params.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="xds/core/v3/collection_entry.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/cncf/udpa/main/xds/core/v3/collection_entry.proto</SourceUrl>
+    </Protobuf>
+    <Protobuf Include="xds/core/v3/resource_locator.proto" GrpcServices="None">
+      <SourceUrl>https://raw.githubusercontent.com/cncf/udpa/main/xds/core/v3/resource_locator.proto</SourceUrl>
+    </Protobuf>
+  </ItemGroup>
+  <Target Name="Update Protos">
+    <Message Importance="high" Text="Refresh proto files" />
+    <Exec Command="dotnet dotnet-grpc refresh @(Protobuf, ' ')" WorkingDirectory="$(MSBuildProjectDirectory)" />
+  </Target>
+</Project>

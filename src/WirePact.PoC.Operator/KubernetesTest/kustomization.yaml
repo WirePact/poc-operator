@@ -1,0 +1,31 @@
+﻿apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: poc-operator-app
+
+commonLabels:
+  app.kubernetes.io/part-of: k8s-operator-test-app
+
+resources:
+  - https://github.com/WirePact/poc-showcase-app/Kubernetes/?ref=main
+
+patchesJson6902:
+  - target:
+      kind: ConfigMap
+      name: modern-service-config-*
+      version: v1
+    patch: |-
+      - op: replace
+        path: /data/USE_WIREPACT
+        value: "true"
+  - target:
+      group: apps
+      kind: Deployment
+      name: deployment
+      version: v1
+      labelSelector: 'app.kubernetes.io/part=legacy-service'
+    patch: |-
+      - op: add
+        path: /metadata/annotations
+        value:
+          ch.wirepact/port: 80
