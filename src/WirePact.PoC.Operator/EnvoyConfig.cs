@@ -1,7 +1,8 @@
-﻿module WirePact.PoC.Operator.EnvoyConfig
-
-let private template envoyPort targetPort translatorPort =
-    $@"
+﻿namespace WirePact.PoC.Operator
+{
+    public static class EnvoyConfig
+    {
+        public static string Bootstrap(int envoyPort, int targetPort, int translatorPort) => $@"
 static_resources:
   listeners:
     - name: listener_0
@@ -72,4 +73,7 @@ static_resources:
                   address:
                     socket_address:
                       address: 127.0.0.1
-                      port_value: {translatorPort}"
+                      port_value: {translatorPort}
+";
+    }
+}

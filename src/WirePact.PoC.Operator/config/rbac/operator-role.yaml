@@ -4,6 +4,36 @@ metadata:
   name: operator-role
 rules:
 - apiGroups:
+  - apps
+  - ''
+  resources:
+  - deployments
+  - configmaps
+  verbs:
+  - '*'
+- apiGroups:
+  - apps
+  resources:
+  - deployments/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - ''
+  resources:
+  - services
+  verbs:
+  - '*'
+- apiGroups:
+  - ''
+  resources:
+  - services/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
   - coordination.k8s.io
   resources:
   - leases

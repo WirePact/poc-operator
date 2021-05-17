@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/dotnet/sdk:latest as build
 WORKDIR /operator
 
 COPY ./ ./
-RUN dotnet publish -c Release -o out src/WirePact.PoC.Operator/WirePact.PoC.Operator.fsproj
+RUN dotnet publish -c Release -o out src/WirePact.PoC.Operator/WirePact.PoC.Operator.csproj
 
 # The runner for the application
 FROM mcr.microsoft.com/dotnet/aspnet:latest as final
