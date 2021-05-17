@@ -3,13 +3,13 @@ namePrefix: wirepact-poc-operator-
 commonLabels:
   operator: wirepact-poc-operator
 resources:
-- ./namespace.yaml
-- ../crds
-- ../rbac
-- ../operator
+  - ./namespace.yaml
+  - ../crds
+  - ../rbac
+  - ../operator
 images:
-- name: operator
-  newName: public-docker-image-path
-  newTag: latest
+  - name: operator
+    newName: ghcr.io/wirepact/poc-operator
+    newTag: latest
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
