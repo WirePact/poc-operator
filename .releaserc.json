@@ -1,0 +1,39 @@
+{
+  "branches": [
+    "main",
+    {
+      "name": "next",
+      "prerelease": "prerelease"
+    }
+  ],
+  "plugins": ["@semantic-release/commit-analyzer", "@semantic-release/release-notes-generator", "@semantic-release/github"],
+  "prepare": [
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "docker build -t ghcr.io/wirepact/poc/operator:latest ./"
+      }
+    ],
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "docker tag ghcr.io/wirepact/poc/operator:latest ghcr.io/wirepact/poc/operator:${nextRelease.version}"
+      }
+    ]
+  ],
+  "publish": [
+    "@semantic-release/github",
+    [
+      "@semantic-release/exec",
+      {
+        "publishCmd": "docker push ghcr.io/wirepact/poc/operator:latest"
+      }
+    ],
+    [
+      "@semantic-release/exec",
+      {
+        "publishCmd": "docker push ghcr.io/wirepact/poc/operator:${nextRelease.version}"
+      }
+    ]
+  ]
+}

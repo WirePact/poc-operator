@@ -7,6 +7,8 @@ RUN dotnet publish -c Release -o out src/WirePact.PoC.Operator/WirePact.PoC.Oper
 
 # The runner for the application
 FROM mcr.microsoft.com/dotnet/aspnet:latest as final
+LABEL org.opencontainers.image.source=https://github.com/WirePact/poc-operator
+
 WORKDIR /operator
 
 COPY --from=build /operator/out/ ./
