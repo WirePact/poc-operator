@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="KubeOps" Version="4.1.1" />
+      <PackageReference Include="KubeOps" Version="4.1.2" />
     </ItemGroup>
 
 </Project>
